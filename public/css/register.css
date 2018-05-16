@@ -217,6 +217,18 @@ html{
 
 }
 
+div#preloader {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    z-index:9999999 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: visible !important;
+    background: #fff url(../img/1.gif) no-repeat center center ; 
+
+}
+
 @media (max-width: 600px) {
 
     .form-register-with-email .form-white-background{

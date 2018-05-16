@@ -1,0 +1,68 @@
+
+'use strict';
+
+
+
+module.exports = function(aws,Club) {
+
+    return {
+
+        setRouting : function(router){
+           
+            router.get('/dashboard', this.adminPage);
+
+            router.post('/uploadFile',aws.Upload.any());
+
+            router.post('/dashboard',this.adminPost);
+            
+        },
+
+       
+         
+        adminPage : (req,res) => {
+          
+           
+                res.render('admin/dashboard');
+      
+        },
+
+        adminPost : (req,res) => {
+          
+            const newClub = new Club();
+            newClub.name = req.body.club;
+            newClub.country = req.body.country;
+            newClub.image = req.body.upload;
+
+            newClub.save((err)=>{
+                if(err) return console.log(err);
+                res.render('admin/dashboard')
+            })
+        },
+
+
+        
+        // uploadFile : (req,res) => {
+          
+        //     const form = formidable.IncomingForm();
+        //     // form.uploadDir = path.join(__dirname,'../public/uploads');
+
+        //     form.on('file' , (field,file)=>{
+        //         // fs.rename(file.path,path.join(form.uploadDir,file.name), (err)=>{
+        //         //     if(err) return console.log(err);
+        //         //     console.log('file renamed succesfully');
+        //         // })
+        //     });
+
+        //     form.on('error' , (err)=>{
+        //         console.log('error event triggered');
+        //     });
+
+        //     form.on('end',()=>{
+        //         console.log('file upload is successfull');
+        //     });
+
+        //     form.parse(req);
+        // },
+
+    }
+}

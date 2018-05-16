@@ -9,12 +9,30 @@
 
 	<title>Login Form</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/css/login.css">
 
 </head>
 
+  <!-- PRELOADER -->
+  <div id="preloader"></div>
 
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a style="text-decoration:none" class="navbar-brand" href="/home"><img src="https://s3.ap-south-1.amazonaws.com/chatapp/logo.png" style="width:40px;padding-bottom:15px;" alt="">  </a>
+      </div>
+  
+    </div>
+  </nav>
 
     <form class="form-login" method="post" action="#">
 
@@ -67,15 +85,23 @@
                     <span class="form-title">Sign in with</span>
                 </div>
 
-                <a href="#" class="form-google-button">Google</a>
-                <a href="#" class="form-facebook-button">Facebook</a>
-                <a href="#" class="form-twitter-button">Twitter</a>
+                <a href="/auth/google" class="form-google-button">Google</a>
+                <a href="/auth/facebook" class="form-facebook-button">Facebook</a>
+                <a href="/auth/twitter" class="form-twitter-button">Twitter</a>
 
             </div>
 
     </form>
-
-  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
+    <script type="text/javascript">
+        // site preloader -- also uncomment the div in the header and the css style for #preloader
+        window.onload = function(){
+            console.log('I have loaded');
+        
+            $('#preloader').fadeOut('slow',function(){$(this).remove();});
+          }
+</script>
 
 </body>
 

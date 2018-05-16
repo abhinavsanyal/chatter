@@ -4,7 +4,15 @@ const path = require('path');
 
 var dependencies = [
     ['_','lodash'],
-    ['passport','passport']
+    ['passport','passport'],
+    ['formidable','formidable'],
+    ['Club','./models/club'],
+    ['Users','./models/user'],
+    ['aws','./helpers/AWSupload'],
+    ['Message', './models/message'],
+    ['GroupMessage', './models/groupMessage'],
+    ['async','async'],
+
 ];
 
 dependencies.forEach((dependency)=>{

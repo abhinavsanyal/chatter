@@ -1,8 +1,45 @@
 
-html{
-    background-color: #f3f3f3;
+body{
+    background-image: linear-gradient(to top,
+    rgba(250,250,250, 0.088),
+    rgba(250,250,250, 0.588) 
+     ),url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 110vh;
+    
+}
+.navbar{
+    background-color: #333;
+    
 }
 
+.navbar-inverse .navbar-brand{
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+}
+
+.navbar-brand:hover{
+    color: #ffffff !important;
+}
+
+.navbar-default .navbar-nav > li > a{
+    color: #fff !important;
+    background-color: #333 !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #fff !important;
+    background-color: #333 !important;
+}
 .form-login{
     max-width: 1000px;
     width: 100%;
@@ -23,8 +60,8 @@ html{
 .form-log-in-with-email .form-white-background{
     width: 570px;
     box-sizing: border-box;
-    background-color: #ffffff;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    background-color: rgba(250, 250, 250, 0.58);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.14);
     padding: 60px 80px;
     margin-bottom: 32px;
 }
@@ -70,7 +107,7 @@ html{
 .form-log-in-with-email button{
     display: block;
     border-radius: 2px;
-    background-color:  #6caee0;
+    background-color:  #333;
     color: #ffffff;
     font-weight: bold;
     box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -88,12 +125,13 @@ html{
 }
 
 .form-log-in-with-email .form-forgotten-password{
-    color:  #4e9eda;
+    color:  #fff;
+    padding-bottom: 34px;
 }
 
 .form-log-in-with-email .form-create-an-account{
-    color:  #7b9d62;
-    background-color: #d6f0c3;
+    color:  #fff;
+    background-color: #222;
 }
 
 .form-log-in-with-email:after{
@@ -103,12 +141,24 @@ html{
     right: -100px;
 
     border-radius: 50%;
-    background-color: #edeca5;
+    background-color: #fff;
     width: 50px;
     height: 50px;
-    color: #93923b;
+    color: #444;
     font-size: 17px;
     line-height: 50px;
+}
+
+div#preloader {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    z-index:9999999 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: visible !important;
+    background: #fff url(../img/1.gif) no-repeat center center ; 
+
 }
 
 .form-sign-in-with-social{
@@ -126,9 +176,10 @@ html{
 
 .form-sign-in-with-social .form-title{
     box-sizing: border-box;
-    color:  #4c565e;
-    font-size: 24px;
+    color:  #222;
+    font-size: 20px;
     padding: 15px 20px;
+    text-transform: uppercase;
     border-bottom: 2px solid #6caee0;
 }
 

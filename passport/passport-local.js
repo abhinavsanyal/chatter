@@ -34,12 +34,12 @@ passport.use('local.signup', new LocalStrategy({
         
       
         var newUser = new User();
-       
+        newUser.username = req.body.name;
         newUser.fullname = req.body.name;
         newUser.email = req.body.email;
         newUser.password = newUser.encryptPassword(req.body.password);
 
-        console.log(newUser);
+  
         
        newUser.save((err,user) => {
 
