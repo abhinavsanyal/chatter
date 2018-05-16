@@ -3,7 +3,20 @@
 const mongoose = require('mongoose');
 const passport = require('passport');
 const User = require('../models/user');
-const secret = require('../secrets/secretFile')
+// const secret = require('../secrets/secretFile');
+const secret = {
+    facebook: {
+        clientID:'139347173422628',
+        clientSecret: '305904d99e04c0e79dcf69242fb06404',
+       
+
+    },
+
+    google: {
+        clientID: '350979007673-5mu3dotu22vn6jalvppvn2hl4ibira88.apps.googleusercontent.com',
+        clientSecret: 'D7MwPXWnhgy8uA2f92hJDHwQ',
+    }
+}
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 passport.serializeUser((user, done) => {
